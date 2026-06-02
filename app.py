@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 from dotenv import load_dotenv
-st.write("Aapka MONGO_URI hai:", os.getenv("MONGO_URI"))
+
 # Load environment variables Test@123456 john@example.com
 load_dotenv()
 
