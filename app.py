@@ -1,7 +1,14 @@
 import streamlit as st
 import os
 from dotenv import load_dotenv
-st.write("Aapka MONGO_URI hai:", os.getenv("MONGO_URI"))
+
+# from pages.auth import login_page, signup_page
+# from pages.fridge import fridge_page
+# from pages.catalog import catalog_page, view_recipe_details
+# from pages.recipe_management import add_recipe_page
+# from pages.meal_planner import meal_planner_page
+# from pages.favorites import favorites_page
+
 # Load environment variables Test@123456 john@example.com
 load_dotenv()
 

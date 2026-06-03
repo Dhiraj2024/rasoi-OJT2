@@ -4,8 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017")
-DB_NAME = os.getenv("DB_NAME", "rasoi_guru_db")
+MONGO_URI = os.getenv("MONGO_URI")
 
 _client = None
 _db = None
@@ -29,12 +28,13 @@ def get_client():
     return _client
 
 def get_db():
-    """Get database with lazy connection"""
+    """Get database dynamically from MONGO_URI without using DB_NAME"""
     global _db
     if _db is None:
         client = get_client()
         if client is not None:
-            _db = client[DB_NAME]
+            # client.get_database() automatic URI ke andar se database name utha lega (.net/rasoi_guru)
+            _db = client.get_database() 
     return _db
 
 class PlaceholderCollection:
