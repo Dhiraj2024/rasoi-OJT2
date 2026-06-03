@@ -2,6 +2,7 @@ import streamlit as st
 import os
 from dotenv import load_dotenv
 
+<<<<<<< HEAD
 # from pages.auth import login_page, signup_page
 # from pages.fridge import fridge_page
 # from pages.catalog import catalog_page, view_recipe_details
@@ -9,6 +10,8 @@ from dotenv import load_dotenv
 # from pages.meal_planner import meal_planner_page
 # from pages.favorites import favorites_page
 
+=======
+>>>>>>> 30de548943b78edec8f9064eb9de2bbc15e67afb
 # Load environment variables Test@123456 john@example.com
 load_dotenv()
 
