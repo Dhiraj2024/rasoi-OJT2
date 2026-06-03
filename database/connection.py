@@ -28,13 +28,17 @@ def get_client():
     return _client
 
 def get_db():
-    """Get database dynamically from MONGO_URI without using DB_NAME"""
+    """Get database dynamically from MONGO_URI, fallback to 'rasoi_guru' if missing"""
     global _db
     if _db is None:
         client = get_client()
         if client is not None:
-            # client.get_database() automatic URI ke andar se database name utha lega (.net/rasoi_guru)
-            _db = client.get_database() 
+            try:
+                # Pehle automatic URI se nikalne ki koshish karega
+                _db = client.get_database()
+            except Exception:
+                # Agar URI mein naam miss hoga, toh default 'rasoi_guru' name use kar lega
+                _db = client["rasoi_guru"] 
     return _db
 
 class PlaceholderCollection:
