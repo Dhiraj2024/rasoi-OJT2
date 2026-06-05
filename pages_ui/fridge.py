@@ -2,11 +2,14 @@ import streamlit as st
 from models.recipe import get_recipes_by_ingredients
 
 COMMON_INGREDIENTS = [
-    "Potato", "Tomato", "Onion", "Garlic", "Ginger", "Paneer", "Chicken",
-    "Rice", "Wheat", "Flour", "Eggs", "Milk", "Olive Oil", "Butter",
-    "Cumin", "Turmeric", "Chilli", "Salt", "Pepper", "Coriander",
-    "Carrot", "Capsicum", "Mushroom", "Spinach", "Lettuce", "Cucumber",
-    "Yogurt", "Cream", "Cheese", "Bread", "Pasta", "Sugar"
+    "Beans", "Bread", "Burger Buns", "Butter", "Cabbage", "Capsicum", "Carrot", 
+    "Cauliflower", "Chicken", "Chilli Sauce", "Coffee Powder", "Coriander Leaves", 
+    "Coriander Powder", "Corn Flour", "Cream (Malai)", "Cucumber", "Cumin Seeds (Jeera)", 
+    "Egg", "Garam Masala", "Garlic", "Ghee", "Ginger", "Green Chutney", "Green Chilli", 
+    "Kitchen King Masala", "Maida", "Mayonnaise", "Milk", "Moong Dal", "Oil", "Onion", 
+    "Paneer", "Paratha", "Peas", "Potato", "Red Chilli Powder", "Rice", "Roti", "Salt", 
+    "Soy Sauce", "Sugar", "Tomato", "Tomato Ketchup", "Toor Dal", "Turmeric Powder", 
+    "Vinegar", "Water", "Wheat Flour (Atta)"
 ]
 
 def fridge_page():
